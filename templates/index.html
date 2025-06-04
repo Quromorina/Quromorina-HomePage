@@ -42,42 +42,29 @@
     <section>
         <h2>使用デバイス</h2>
         <div class="device-cards">
+            {% for d in devices %}
             <div class="device-card">
-                <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/51IezfIf2dL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="LAMZU Maya">
-                <h3><a href="https://amzn.to/4koWjRo">LAMZU Maya</a></h3>
-                <div class="rating">★★★★☆</div>
+                <img src="{{ d.image }}" alt="{{ d.name }}">
+                <h3><a href="{{ d.url }}">{{ d.name }}</a></h3>
+                <div class="rating">{{ d.rating }}</div>
             </div>
-            <div class="device-card">
-                <img src="https://www.fumo-collection.com/cdn/shop/files/gw-hana-red-01.jpg?v=1730797322&width=800" alt="GLASSWRKS HANA">
-                <h3><a href="https://www.fumo-collection.com/products/glsswrks-mousepad-hana-int-4942?srsltid=AfmBOorT8DhhlGi-qyTb0jjEkN6q_xjok_lrqFczCP6s-ymZsM6Dsar7">GLASSWRKS HANA</a></h3>
-                <div class="rating">★★★★☆</div>
-            </div>
-            <div class="device-card">
-                <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/61hDXdfBPbL._AC_SX569_.jpg" alt="nuphy Air60 HE">
-                <h3><a href="https://amzn.to/3Sw9nbz">nuphy Air60 HE</a></h3>
-                <div class="rating">★★★★★</div>
-            </div>
-            <div class="device-card">
-                <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/614xGVEssVL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="Linsoul ZiiGaat×Fresh Review Arete">
-                <h3><a href="https://amzn.to/3ZMlDII">Linsoul ZiiGaat×Fresh Review Arete</a></h3>
-                <div class="rating">★★★★☆</div>
-            </div>
-            <div class="device-card">
-                <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/41rA3+WA9eL._AC_SY300_SX300_.jpg" alt="SONY INZONE Buds">
-                <h3><a href="https://amzn.to/3HnOzAG">SONY INZONE Buds</a></h3>
-                <div class="rating">★★★★☆</div>
-            </div>
-            <div class="device-card">
-                <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/511Ei9TIaBL._AC_SX679_.jpg" alt="MOTU M2">
-                <h3><a href="https://amzn.to/3ZKD902">MOTU M2</a></h3>
-                <div class="rating">★★★★★</div>
-            </div>
-            <div class="device-card">
-                <img src="https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/71jx4DitqgL.__AC_SX300_SY300_QL70_ML2_.jpg" alt="オーディオテクニカ AT2040">
-                <h3><a href="https://amzn.to/43sBBu4">オーディオテクニカ AT2040</a></h3>
-                <div class="rating">★★★★☆</div>
-            </div>
+            {% endfor %}
         </div>
+    </section>
+
+    <section>
+        <h2>視聴・読了した作品</h2>
+        {% for category, items in media.items() %}
+        <h3>{{ category|capitalize }}</h3>
+        <div class="media-cards">
+            {% for item in items %}
+            <div class="media-card">
+                <img src="{{ item.image }}" alt="{{ item.title }}">
+                <p>{{ item.title }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endfor %}
     </section>
 </body>
 </html>

@@ -1,0 +1,15 @@
+{
+  "anime": [
+    {"title": "機動戦士ガンダムSEED", "image": "https://via.placeholder.com/150"},
+    {"title": "SPY★FAMILY", "image": "https://via.placeholder.com/150"}
+  ],
+  "manga": [
+    {"title": "ワンピース", "image": "https://via.placeholder.com/150"}
+  ],
+  "movies": [
+    {"title": "インセプション", "image": "https://via.placeholder.com/150"}
+  ],
+  "novels": [
+    {"title": "涼宮ハルヒの憂鬱", "image": "https://via.placeholder.com/150"}
+  ]
+}

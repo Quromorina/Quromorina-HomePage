@@ -89,3 +89,24 @@ section {
     color: #ffd700;
     font-size: 1.2rem;
 }
+
+.media-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.media-card {
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 6px;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.media-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}

@@ -66,14 +66,13 @@
         <h2>視聴・読了した作品</h2>
         {% for category, items in media.items() %}
         <h3>{{ category|capitalize }}</h3>
-        <div class="media-cards">
-            {% for item in items %}
-            <div class="media-card">
-                <img src="{{ item.image }}" alt="{{ item.title }}">
-                <p>{{ item.title }}</p>
+            <div class="media-cards">
+                {% for item in items %}
+                <div class="media-card">
+                    <p>{{ item.title }}</p>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
         {% endfor %}
     </section>
 </body>

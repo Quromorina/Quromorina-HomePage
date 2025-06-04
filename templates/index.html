@@ -23,22 +23,22 @@
         <h2>SNS リンク</h2>
         <ul class="social-links">
             <li>
-                <a href="https://x.com/Quromorina">
+                <a href="https://x.com/Quromorina" target="_new" rel="noopener noreferrer">
                     <img src="/static/twitter.png" alt="Twitter icon">Twitter
                 </a>
             </li>
             <li>
-                <a href="https://www.twitch.tv/quromorina">
+                <a href="https://www.twitch.tv/quromorina" target="_new" rel="noopener noreferrer">
                     <img src="/static/twitch.png" alt="Twitch icon">Twitch
                 </a>
             </li>
             <li>
-                <a href="https://www.instagram.com/quromorina?igsh=MXI2OW9xeGM1M2tjag==">
+                <a href="https://www.instagram.com/quromorina?igsh=MXI2OW9xeGM1M2tjag==" target="_new" rel="noopener noreferrer">
                     <img src="/static/instagram.png" alt="Instagram icon">Instagram
                 </a>
             </li>
             <li>
-                <a href="https://github.com/Quromorina">
+                <a href="https://github.com/Quromorina" target="_new" rel="noopener noreferrer">
                     <img src="/static/github.png" alt="GitHub icon">GitHub
                 </a>
             </li>
@@ -53,7 +53,7 @@
         <h2>使用デバイス</h2>
         <div class="device-cards">
             {% for d in devices %}
-            <a class="device-card" href="{{ d.url }}">
+            <a class="device-card" href="{{ d.url }}" target="_new" rel="noopener noreferrer">
                 <img src="{{ d.image }}" alt="{{ d.name }}">
                 <p class="device-type">{{ d.type }}</p>
                 <h3>{{ d.name }}</h3>

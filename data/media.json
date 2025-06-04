@@ -1,15 +1,19 @@
 {
-  "anime": [
+  "アニメ": [
     {"title": "機動戦士ガンダムSEED", "image": "https://via.placeholder.com/150"},
     {"title": "SPY★FAMILY", "image": "https://via.placeholder.com/150"}
   ],
-  "manga": [
+  "漫画": [
     {"title": "ワンピース", "image": "https://via.placeholder.com/150"}
   ],
-  "movies": [
+  "映画": [
     {"title": "インセプション", "image": "https://via.placeholder.com/150"}
   ],
-  "novels": [
+  "ドラマ": [
+    {"title": "Trick", "image": "https://via.placeholder.com/150"},
+    {"title": "リーガルハイ", "image": "https://via.placeholder.com/150"}
+  ],
+  "小説・ノベル": [
     {"title": "涼宮ハルヒの憂鬱", "image": "https://via.placeholder.com/150"}
   ]
 }

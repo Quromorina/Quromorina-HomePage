@@ -2,7 +2,6 @@ from flask import Flask, render_template
 import json
 from pathlib import Path
 
-from amazon_rating import fetch_amazon_rating
 
 app = Flask(__name__)
 
@@ -11,18 +10,13 @@ def index():
     devices = []
     media = {}
 
-    devices_path = Path('data/devices.json')
-    media_path = Path('data/media.json')
+    base_dir = Path(__file__).resolve().parent
+    devices_path = base_dir / 'data' / 'devices.json'
+    media_path = base_dir / 'data' / 'media.json'
 
     if devices_path.exists():
         with devices_path.open() as f:
             devices = json.load(f)
-
-        for item in devices:
-            if item.get('amazon_url'):
-                rating = fetch_amazon_rating(item['amazon_url'])
-                if rating != 'N/A':
-                    item['rating'] = rating
 
     if media_path.exists():
         with media_path.open() as f:

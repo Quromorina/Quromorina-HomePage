@@ -13,6 +13,11 @@
     <section id="intro">
         <h2>自己紹介</h2>
         <p>ゲームしたりクラブ行ったりしてるオタク。アニメとか漫画とか、映画とか、たまに小説とか見る</p>
+        <div class="intro-icons">
+            {% for icon in icons %}
+            <img src="{{ icon }}" alt="icon">
+            {% endfor %}
+        </div>
     </section>
     <section>
         <h2>SNS リンク</h2>

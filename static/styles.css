@@ -105,24 +105,22 @@ section {
 
 .media-cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     gap: 0.5rem;
     list-style: none;
     padding: 0;
 }
 
+
 .media-card {
     background: #111;
     border: 1px solid #333;
     border-radius: 6px;
-    padding: 0.5rem;
+    padding: 0.25rem;
     text-align: center;
+    font-size: 0.9rem;
 }
 
-.media-card img {
-    max-width: 100%;
-    border-radius: 4px;
-}
 
 @media (max-width: 600px) {
     .social-links li {

@@ -3,55 +3,89 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background: #000;
+    color: #f0f0f0;
 }
+
 header {
-    background-color: #333;
-    color: white;
+    background-color: #900;
+    color: #fff;
     padding: 1rem;
     text-align: center;
 }
+
 section {
     padding: 1rem;
 }
 
-/* Intro section icons */
-.social-icons {
-    display: flex;
-    gap: 1rem;
-    margin: 0.5rem 0;
-}
-
-.social-icons img {
-    width: 60px;
-    height: 60px;
-}
-
-/* Styled link lists */
-.social-links,
-.device-links {
+.social-links {
     list-style: none;
     padding: 0;
 }
 
-.social-links li,
-.device-links li {
+.social-links li {
     margin: 0.5rem 0;
 }
 
-.social-links li a,
-.device-links li a {
-    display: inline-block;
+.social-links li a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.4rem 0.8rem;
-    border: 2px solid #444;
+    border: 2px solid #900;
     border-radius: 6px;
-    background: linear-gradient(135deg, #111, #2a2a2a);
-    color: #f0f0f0;
+    background: linear-gradient(135deg, #200, #600);
+    color: #fff;
     text-decoration: none;
     transition: background 0.3s, transform 0.3s;
 }
 
-.social-links li a:hover,
-.device-links li a:hover {
-    background: linear-gradient(135deg, #333, #555);
+.social-links li a img {
+    width: 24px;
+    height: 24px;
+}
+
+.social-links li a:hover {
+    background: linear-gradient(135deg, #900, #c00);
     transform: translateY(-3px);
+}
+
+.device-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+}
+
+.device-card {
+    background: linear-gradient(135deg, #200, #600);
+    border: 2px solid #900;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.device-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.device-card h3 {
+    margin: 0.5rem 0;
+}
+
+.device-card a {
+    color: #ff7777;
+    text-decoration: none;
+}
+
+.device-card a:hover {
+    text-decoration: underline;
+}
+
+.rating {
+    color: #ffd700;
+    font-size: 1.2rem;
 }

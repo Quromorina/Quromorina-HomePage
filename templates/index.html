@@ -43,10 +43,11 @@
         <h2>使用デバイス</h2>
         <div class="device-cards">
             {% for d in devices %}
-            <div class="device-card">
+            <a class="device-card" href="{{ d.url }}">
                 <img src="{{ d.image }}" alt="{{ d.name }}">
-                <h3><a href="{{ d.url }}">{{ d.name }}</a></h3>
-            </div>
+                <p class="device-type">{{ d.type }}</p>
+                <h3>{{ d.name }}</h3>
+            </a>
             {% endfor %}
         </div>
     </section>

@@ -1,9 +1,20 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import json
 from pathlib import Path
 
 
 app = Flask(__name__)
+
+@app.after_request
+def set_csp(response):
+    response.headers["Content-Security-Policy"] = (
+        "default-src 'self'; "
+        "frame-src https://www.youtube.com https://platform.twitter.com https://*.twitter.com https://clips.twitch.tv https://player.twitch.tv; "
+        "script-src 'self' https://platform.twitter.com https://*.twimg.com https://www.instagram.com; "
+        "style-src 'self' 'unsafe-inline'; "
+        "img-src 'self' data: https://*.twimg.com https://*.instagram.com;"
+    )
+    return response
 
 @app.route('/')
 def index():

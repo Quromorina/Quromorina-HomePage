@@ -131,8 +131,8 @@ section {
 }
 
 .twitter-timeline {
-    width: 300px;
-    min-width: 240px;
+    width: 250px;
+    min-width: 200px;
     height: 350px !important;
     border-radius: 12px;
     border: 2px solid #333;

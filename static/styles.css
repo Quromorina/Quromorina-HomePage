@@ -137,7 +137,7 @@ section {
 }
 
 .tweet-area {
-    flex: 1 1 320px;
+    flex: 0 1 320px;
     max-width: 400px;
     min-width: 240px;
     display: flex;

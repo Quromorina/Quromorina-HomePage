@@ -166,4 +166,9 @@ section {
     .tweet-area {
         max-width: 100%;
     }
+    .tweet-area iframe,
+    .tweet-area .twitter-timeline { /* twitter-timelineクラスはiframeに置き換わる前のaタグのことね */
+        min-height: 350px; /* 最低でもこの高さを確保するようにしてみる */
+        /* height: 350px !important; は既にあると思うけど、min-heightも試してみて */
+    }
 }

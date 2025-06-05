@@ -147,18 +147,12 @@ section {
 
 #tweets {
     margin: 1rem 0;
+    text-align: left;
     display: flex;
     flex-direction: row;
     gap: 24px;
     align-items: flex-start;
     flex-wrap: wrap;
-}
-
-#tweets h2 {
-    /* 横並び用に幅100%&左寄せ */
-    width: 100%;
-    text-align: left;
-    margin-bottom: 0.8rem;
 }
 
 .tweet-area, .twitch-clip-area, .instagram-area {

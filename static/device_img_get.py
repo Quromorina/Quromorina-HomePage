@@ -8,7 +8,7 @@ save_dir = "static/device_imgs"
 os.makedirs(save_dir, exist_ok=True)
 
 # JSON読み込み
-with open("device_images.json", encoding="utf-8") as f:
+with open("data/device_images.json", encoding="utf-8") as f:
     items = json.load(f)
 
 def safe_filename(name):

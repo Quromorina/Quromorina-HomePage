@@ -46,24 +46,13 @@
     </section>
     <section id="tweets">
         <h2>最新ツイートとmeme投稿</h2>
-        <!-- Twitterタイムライン -->
-        <div class="tweet-area">
-        <a class="twitter-timeline" href="https://twitter.com/Quromorina"
-            data-width="450"
-            data-height="350"
-            data-theme="dark"
-            data-tweet-limit="5">
-            Tweets by Quromorina </a>
-        </div>
-        <div class="tweet-area">
-        <a class="twitter-timeline"
-            href="https://twitter.com/pointing_meme"
-            data-width="450"
-            data-height="350"
-            data-theme="dark"
-            data-tweet-limit="5">
-            Tweets by Guys pointing
-        </a>
+        <div class="tweet-wrapper">
+            <div class="tweet-area">
+                <a class="twitter-timeline" href="https://twitter.com/Quromorina" data-theme="dark" data-tweet-limit="5">Tweets by Quromorina</a>
+            </div>
+            <div class="tweet-area">
+                <a class="twitter-timeline" href="https://twitter.com/pointing_meme" data-theme="dark" data-tweet-limit="5">Tweets by Guys pointing</a>
+            </div>
         </div>
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </section>
@@ -77,6 +66,14 @@
                 <h3>{{ d.name }}</h3>
             </a>
             {% endfor %}
+        </div>
+    </section>
+    <section id="youtube">
+        <h2>おすすめYouTubeチャンネル</h2>
+        <div class="youtube-videos">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/aqz-KE-bpKQ" title="YouTube video" frameborder="0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/oHg5SJYRHA0" title="YouTube video" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 </body>

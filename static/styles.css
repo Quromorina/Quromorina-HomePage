@@ -123,33 +123,7 @@ section {
 }
 
 
-.tweets {
-    margin: 1rem 0;
-    text-align: left;
-}
-
-.tweet-wrapper {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.tweet-area {
-    flex: 0 1 450px;
-    max-width: 500px;
-    min-width: 240px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-/* 埋め込み要素サイズ調整 */
-.tweet-area iframe, 
-.tweet-area .twitter-timeline {
-    width: 100% !important;
+.twitter-timeline {
     min-width: 240px;
     max-width: 600px;
     height: 350px !important;
@@ -157,19 +131,4 @@ section {
     border: 2px solid #333;
     background: #111;
     box-sizing: border-box;
-}
-
-@media (max-width: 900px) {
-    .tweet-wrapper {
-        flex-direction: column;
-        gap: 16px;
-    }
-    .tweet-area {
-        max-width: 100%;
-    }
-    .tweet-area iframe,
-    .tweet-area .twitter-timeline { /* twitter-timelineクラスはiframeに置き換わる前のaタグのことね */
-        min-height: 350px; /* 最低でもこの高さを確保するようにしてみる */
-        /* height: 350px !important; は既にあると思うけど、min-heightも試してみて */
-    }
 }

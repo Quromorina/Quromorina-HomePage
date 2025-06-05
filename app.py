@@ -10,7 +10,7 @@ def set_csp(response):
     response.headers["Content-Security-Policy"] = (
         "default-src 'self'; "
         "frame-src https://www.youtube.com https://platform.twitter.com https://*.twitter.com https://clips.twitch.tv https://player.twitch.tv; "
-        "script-src 'self' https://platform.twitter.com https://*.twimg.com https://www.instagram.com; "
+        "script-src 'self' https://platform.twitter.com https://*.twimg.com; "
         "style-src 'self' 'unsafe-inline'; "
         "img-src 'self' data: https://*.twimg.com https://*.instagram.com;"
     )

@@ -99,7 +99,6 @@ section {
 }
 
 
-
 @media (max-width: 600px) {
     .social-links li {
         flex: 0 0 calc(50% - 0.5rem);

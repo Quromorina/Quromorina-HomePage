@@ -132,3 +132,15 @@ section {
     border-radius: 50%;
     border: 1px solid #555;
 }
+
+#playlist {
+    padding: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.spotify-embed iframe {
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}

@@ -1,51 +1,52 @@
 [
   {
     "name": "LAMZU Maya",
-    "image": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/51IezfIf2dL.__AC_SX300_SY300_QL70_ML2_.jpg",
+    "image": "/static/device_imgs/LAMZU_Maya.jpg",
     "url": "https://amzn.to/4koWjRo",
     "amazon_url": "https://amzn.to/4koWjRo",
     "type": "マウス"
   },
   {
     "name": "GLASSWRKS HANA",
-    "image": "https://www.fumo-collection.com/cdn/shop/files/gw-hana-red-01.jpg?v=1730797322&width=800",
+    "image": "/static/device_imgs/GLASSWRKS_HANA.jpg",
     "url": "https://www.fumo-collection.com/products/glsswrks-mousepad-hana-int-4942?srsltid=AfmBOorT8DhhlGi-qyTb0jjEkN6q_xjok_lrqFczCP6s-ymZsM6Dsar7",
     "amazon_url": null,
     "type": "マウスパッド"
   },
   {
     "name": "nuphy Air60 HE",
-    "image": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/61hDXdfBPbL._AC_SX569_.jpg",
+    "image": "/static/device_imgs/nuphy_Air60_HE.jpg",
     "url": "https://amzn.to/3Sw9nbz",
     "amazon_url": "https://amzn.to/3Sw9nbz",
     "type": "キーボード"
   },
   {
     "name": "Linsoul ZiiGaat×Fresh Review Arete",
-    "image": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/614xGVEssVL.__AC_SX300_SY300_QL70_ML2_.jpg",
+    "image": "/static/device_imgs/Linsoul_ZiiGaat_Fresh_Review_Arete.jpg",
     "url": "https://amzn.to/3ZMlDII",
     "amazon_url": "https://amzn.to/3ZMlDII",
     "type": "イヤホン"
   },
   {
     "name": "SONY INZONE Buds",
-    "image": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/41rA3+WA9eL._AC_SY300_SX300_.jpg",
+    "image": "/static/device_imgs/SONY_INZONE_Buds.jpg",
     "url": "https://amzn.to/3HnOzAG",
     "amazon_url": "https://amzn.to/3HnOzAG",
     "type": "イヤホン(サブ)"
   },
   {
     "name": "MOTU M2",
-    "image": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/511Ei9TIaBL._AC_SX679_.jpg",
+    "image": "/static/device_imgs/MOTU_M2.jpg",
     "url": "https://amzn.to/3ZKD902",
     "amazon_url": "https://amzn.to/3ZKD902",
     "type": "オーディオインターフェース"
   },
   {
     "name": "オーディオテクニカ AT2040",
-    "image": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/71jx4DitqgL.__AC_SX300_SY300_QL70_ML2_.jpg",
+    "image": "/static/device_imgs/オーディオテクニカ_AT2040.jpg",
     "url": "https://amzn.to/43sBBu4",
     "amazon_url": "https://amzn.to/43sBBu4",
     "type": "マイク"
   }
 ]
+

@@ -1,51 +1,58 @@
 [
   {
     "name": "LAMZU Maya",
-    "image_url": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/51IezfIf2dL.__AC_SX300_SY300_QL70_ML2_.jpg",
-    "url": "https://amzn.to/4koWjRo",
-    "type": "マウス"
+    "image_url": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/51IezfIf2dL._AC_SX679_.jpg",
+    "url": "https://amzn.to/4kS2htQ",
+    "type": "マウス",
+    "image": "/static/device_imgs/LAMZU_Maya.jpg"
   },
   {
     "name": "GLASSWRKS HANA",
     "image_url": "https://www.fumo-collection.com/cdn/shop/files/gw-hana-red-01.jpg?v=1730797322&width=800",
     "url": "https://www.fumo-collection.com/products/glsswrks-mousepad-hana-int-4942?srsltid=AfmBOorT8DhhlGi-qyTb0jjEkN6q_xjok_lrqFczCP6s-ymZsM6Dsar7",
-    "type": "マウスパッド"
+    "type": "マウスパッド",
+    "image": "/static/device_imgs/GLASSWRKS_HANA.jpg"
   },
   {
     "name": "nuphy Air60 HE",
     "image_url": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/61hDXdfBPbL.__AC_SX300_SY300_QL70_ML2_.jpg",
     "url": "https://amzn.to/3Sw9nbz",
-    "type": "キーボード"
+    "type": "キーボード",
+    "image": "/static/device_imgs/nuphy_Air60_HE.jpg"
   },
   {
     "name": "Linsoul ZiiGaat×Fresh Review Arete",
     "image_url": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/614xGVEssVL.__AC_SX300_SY300_QL70_ML2_.jpg",
     "url": "https://amzn.to/3ZMlDII",
-    "type": "イヤホン"
+    "type": "イヤホン",
+    "image": "/static/device_imgs/Linsoul_ZiiGaat_Fresh_Review_Arete.jpg"
   },
   {
     "name": "SONY INZONE Buds",
     "image_url": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/41rA3+WA9eL._AC_SY300_SX300_.jpg",
     "url": "https://amzn.to/3HnOzAG",
-    "type": "イヤホン(サブ)"
+    "type": "イヤホン(サブ)",
+    "image": "/static/device_imgs/SONY_INZONE_Buds.jpg"
   },
   {
     "name": "MOTU M2",
     "image_url": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/511Ei9TIaBL._AC_SX679_.jpg",
     "url": "https://amzn.to/3ZKD902",
-    "type": "オーディオインターフェース"
+    "type": "オーディオインターフェース",
+    "image": "/static/device_imgs/MOTU_M2.jpg"
   },
   {
     "name": "オーディオテクニカ AT2040",
     "image_url": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/71jx4DitqgL.__AC_SX300_SY300_QL70_ML2_.jpg",
     "url": "https://amzn.to/43sBBu4",
-    "type": "マイク"
+    "type": "マイク",
+    "image": "/static/device_imgs/オーディオテクニカ_AT2040.jpg"
   },
   {
     "name": "sennheiser momentum true wireless 4",
     "image_url": "https://m.media-amazon.com/images/W/MEDIAX_1215821-T1/images/I/71N2fm3G9qL._AC_SX679_.jpg",
     "url": "https://amzn.to/3ZkXusK",
-    "type": "普段使いイヤホン"
+    "type": "普段使いイヤホン",
+    "image": "/static/device_imgs/sennheiser_momentum_true_wireless_4.jpg"
   }
 ]
-

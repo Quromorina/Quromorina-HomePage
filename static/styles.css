@@ -148,7 +148,8 @@ section {
 .youtube-videos {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1rem; 
+  gap: 1rem;
+  justify-content: center;
 }
 
 .video-item {

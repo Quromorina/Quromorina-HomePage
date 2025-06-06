@@ -133,3 +133,8 @@ section {
     border: 1px solid #555;
 }
 
+.spotify-playlists {
+  display: flex;
+  gap: 20px; /* 余白を入れる場合 */
+  justify-content: flex-start; /* 必要ならcenterとかも */
+}

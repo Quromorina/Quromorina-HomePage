@@ -103,14 +103,12 @@ section {
 
 @media (max-width: 600px) {
     .social-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    justify-content: center;
-    max-width: 600px;
-    margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 画面を半分こして、2つの列を作る */
+    }
+    .social-links li {
+        display: flex;
+        justify-content: center;
     }
 }
 

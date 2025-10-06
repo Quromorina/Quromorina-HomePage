@@ -34,7 +34,7 @@ def generate_dynamic_html():
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quromorinaプロフィール</title>
     <link rel="stylesheet" href="static/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>

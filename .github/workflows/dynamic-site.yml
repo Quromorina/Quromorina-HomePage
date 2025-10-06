@@ -1,0 +1,62 @@
+name: Dynamic Site Generation
+
+# トリガー設定
+on:
+  # プッシュ時に実行
+  push:
+    branches: [ main ]
+  # 手動実行可能
+  workflow_dispatch:
+  # 定期的に実行（毎日午前2時）
+  schedule:
+    - cron: '0 2 * * *'
+
+jobs:
+  generate-site:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+        
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4
+        
+    - name: Update device images
+      run: |
+        python device_img_get.py
+        
+    - name: Generate dynamic HTML
+      run: |
+        python generate_html.py
+        
+    - name: Check for changes
+      id: verify-changed-files
+      run: |
+        if [ -n "$(git status --porcelain)" ]; then
+          echo "changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "changed=false" >> $GITHUB_OUTPUT
+        fi
+        
+    - name: Commit and push changes
+      if: steps.verify-changed-files.outputs.changed == 'true'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add .
+        git commit -m "🤖 Auto-update: $(date '+%Y-%m-%d %H:%M:%S')"
+        git push
+        
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./

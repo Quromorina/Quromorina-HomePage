@@ -1,4 +1,33 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+"""
+GitHub Actions用の動的HTML生成スクリプト
+Flaskアプリの機能を再現して静的HTMLを生成
+"""
+
+import os
+import json
+from pathlib import Path
+
+def generate_dynamic_html():
+    """動的にHTMLを生成"""
+    
+    # デバイス情報を読み込み
+    devices = []
+    devices_path = Path('data/devices.json')
+    if devices_path.exists():
+        with devices_path.open(encoding='utf-8') as f:
+            devices = json.load(f)
+    
+    # アイコン情報を動的に取得
+    icons = []
+    icons_dir = Path('static/icons')
+    if icons_dir.exists():
+        for path in sorted(icons_dir.iterdir()):
+            if path.is_file():
+                icons.append(f'static/icons/{path.name}')
+    
+    # HTMLテンプレート
+    html_template = '''<!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
@@ -18,9 +47,7 @@
         <h2>アイコン</h2>
         <p>インターネットでの姿たち</p>
         <div class="intro-icons">
-            <img src="static/icons/icon1.jpg" alt="icon">
-            <img src="static/icons/icon2.jpg" alt="icon">
-            <img src="static/icons/icon3.jpg" alt="icon">
+            {icons_html}
         </div>
     </section>
     <section>
@@ -51,46 +78,7 @@
     <section>
         <h2>使用デバイス</h2>
         <div class="device-cards">
-            <a class="device-card" href="https://amzn.to/4kS2htQ" target="_new" rel="noopener noreferrer">
-                <img src="/static/device_imgs/LAMZU_Maya.jpg" alt="LAMZU Maya">
-                <p class="device-type">マウス</p>
-                <h3>LAMZU Maya</h3>
-            </a>
-            <a class="device-card" href="https://www.fumo-collection.com/products/glsswrks-mousepad-hana-int-4942?srsltid=AfmBOorT8DhhlGi-qyTb0jjEkN6q_xjok_lrqFczCP6s-ymZsM6Dsar7" target="_new" rel="noopener noreferrer">
-                <img src="/static/device_imgs/GLASSWRKS_HANA.jpg" alt="GLASSWRKS HANA">
-                <p class="device-type">マウスパッド</p>
-                <h3>GLASSWRKS HANA</h3>
-            </a>
-            <a class="device-card" href="https://amzn.to/43X786s" target="_new" rel="noopener noreferrer">
-                <img src="/static/device_imgs/WOBKEY_RAINY_75_RT.jpg" alt="WOBKEY RAINY 75 RT">
-                <p class="device-type">キーボード</p>
-                <h3>WOBKEY RAINY 75 RT</h3>
-            </a>
-            <a class="device-card" href="https://amzn.to/3ZMlDII" target="_new" rel="noopener noreferrer">
-                <img src="/static/device_imgs/Linsoul_ZiiGaat_Fresh_Review_Arete.jpg" alt="Linsoul ZiiGaat×Fresh Review Arete">
-                <p class="device-type">イヤホン</p>
-                <h3>Linsoul ZiiGaat×Fresh Review Arete</h3>
-            </a>
-            <a class="device-card" href="https://amzn.to/3HnOzAG" target="_new" rel="noopener noreferrer">
-                <img src="/static/device_imgs/SONY_INZONE_Buds.jpg" alt="SONY INZONE Buds">
-                <p class="device-type">イヤホン(サブ)</p>
-                <h3>SONY INZONE Buds</h3>
-            </a>
-            <a class="device-card" href="https://amzn.to/3ZKD902" target="_new" rel="noopener noreferrer">
-                <img src="/static/device_imgs/MOTU_M2.jpg" alt="MOTU M2">
-                <p class="device-type">オーディオインターフェース</p>
-                <h3>MOTU M2</h3>
-            </a>
-            <a class="device-card" href="https://amzn.to/43sBBu4" target="_new" rel="noopener noreferrer">
-                <img src="/static/device_imgs/オーディオテクニカ_AT2040.jpg" alt="オーディオテクニカ AT2040">
-                <p class="device-type">マイク</p>
-                <h3>オーディオテクニカ AT2040</h3>
-            </a>
-            <a class="device-card" href="https://amzn.to/3ZkXusK" target="_new" rel="noopener noreferrer">
-                <img src="/static/device_imgs/sennheiser_momentum_true_wireless_4.jpg" alt="sennheiser momentum true wireless 4">
-                <p class="device-type">普段使いイヤホン</p>
-                <h3>sennheiser momentum true wireless 4</h3>
-            </a>
+            {devices_html}
         </div>
     </section>
     <section>
@@ -123,4 +111,33 @@
             <p>&copy; 2025 Quromorina</p>
         </footer>
 </body>
-</html>
+</html>'''
+    
+    # アイコンHTMLを生成
+    icons_html = '\n            '.join([f'<img src="{icon}" alt="icon">' for icon in icons])
+    
+    # デバイスHTMLを生成
+    devices_html = '\n            '.join([
+        f'''<a class="device-card" href="{device['url']}" target="_new" rel="noopener noreferrer">
+                <img src="{device['image']}" alt="{device['name']}">
+                <p class="device-type">{device['type']}</p>
+                <h3>{device['name']}</h3>
+            </a>''' for device in devices
+    ])
+    
+    # HTMLを生成
+    html_content = html_template.format(
+        icons_html=icons_html,
+        devices_html=devices_html
+    )
+    
+    # index.htmlに書き込み
+    with open('index.html', 'w', encoding='utf-8') as f:
+        f.write(html_content)
+    
+    print("動的HTML生成完了!")
+    print(f"デバイス数: {len(devices)}")
+    print(f"アイコン数: {len(icons)}")
+
+if __name__ == '__main__':
+    generate_dynamic_html()

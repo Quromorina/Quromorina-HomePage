@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quromorinaプロフィール</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Quromorinaプロフィール</h1>
+    </header>
+    <section id="intro">
+        <h2>自己紹介</h2>
+        <p>ゲームしたりクラブ行ったりしてるオタク。アニメとか漫画とか、映画とか、たまに小説とか見る</p>
+    </section>
+    <section id="intro">
+        <h2>アイコン</h2>
+        <p>インターネットでの姿たち</p>
+        <div class="intro-icons">
+            {% for icon in icons %}
+            <img src="{{ icon }}" alt="icon">
+            {% endfor %}
+        </div>
+    </section>
+    <section>
+        <h2>各種リンク</h2>
+        <ul class="social-links">
+            <li>
+                <a href="https://x.com/Quromorina" target="_new" rel="noopener noreferrer">
+                    <img src="/static/twitter.png" alt="Twitter icon">Twitter
+                </a>
+            </li>
+            <li>
+                <a href="https://www.twitch.tv/quromorina" target="_new" rel="noopener noreferrer">
+                    <img src="/static/twitch.png" alt="Twitch icon">Twitch
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/quromorina?igsh=MXI2OW9xeGM1M2tjag==" target="_new" rel="noopener noreferrer">
+                    <img src="/static/instagram.png" alt="Instagram icon">Instagram
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/Quromorina" target="_new" rel="noopener noreferrer">
+                    <img src="/static/github.png" alt="GitHub icon">GitHub
+                </a>
+            </li>
+        </ul>
+    </section>
+    <section>
+        <h2>使用デバイス</h2>
+        <div class="device-cards">
+            {% for d in devices %}
+            <a class="device-card" href="{{ d.url }}" target="_new" rel="noopener noreferrer">
+                <img src="{{ d.image }}" alt="{{ d.name }}">
+                <p class="device-type">{{ d.type }}</p>
+                <h3>{{ d.name }}</h3>
+            </a>
+            {% endfor %}
+        </div>
+    </section>
+    <section>
+        <h2>最近のプレイリスト</h2>
+        <div class="spotify-playlists">
+            <div class="spotify-item">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/23E2XgoNawWCXVo5xYRYdi?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+            <div class="spotify-item">
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/6H8vyKLDIwiuLN1wa92Yh9?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+    <section>
+    <h2>おすすめYoutubeコンテンツ</h2>
+    <div class="youtube-videos">
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/qZapP9IwwWU?si=LmXj24yuyMmmkt3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/JIj7_Rgu2eo?si=XT9Knk7G5kprSrKc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <div class="video-item">
+            <iframe src="https://www.youtube.com/embed/qkWIQ-80EZU?si=muTCJ3ZH6VuDxKSM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        </div>
+    </section>
+
+        <footer>
+            <p>&copy; 2025 Quromorina</p>
+        </footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# GitHub Pages用の設定ファイル
+
+# サイトの基本設定
+title: "Quromorinaプロフィール"
+description: "ゲームしたりクラブ行ったりしてるオタクのプロフィールサイト"
+baseurl: "" # リポジトリ名がusername.github.ioの場合は空文字
+url: "https://quromorina.github.io" # 実際のGitHub PagesのURLに変更してください
+
+# ビルド設定
+markdown: kramdown
+highlighter: rouge
+theme: minima
+
+# プラグイン
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# 除外ファイル（ビルド時に無視する）
+exclude:
+  - README.md
+  - app.py
+  - device_img_get.py
+  - requirements.txt
+  - data/
+  - templates/
+  - openai/

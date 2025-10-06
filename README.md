@@ -1,27 +1,45 @@
-# Quromorina Homepage
+# Quromorinaプロフィールサイト
 
-このリポジトリはラズベリーパイ上で動作する簡単な自己紹介用ホームページのサンプルです。
+ゲームしたりクラブ行ったりしてるオタクのプロフィールサイトです。
 
-## 構成
-- **Python (Flask)** を用いたシンプルなバックエンド
-- HTML/CSS で記述されたフロントエンド
+## 機能
 
-## セットアップ
-1. 依存パッケージをインストールします。
+- 自己紹介
+- 使用デバイス一覧
+- 各種SNSリンク
+- Spotifyプレイリスト
+- おすすめYouTubeコンテンツ
+
+## GitHub Pagesでのデプロイ
+
+このサイトはGitHub Pagesでホスティングされています。
+
+### デプロイ手順
+
+1. このリポジトリをGitHubにプッシュ
+2. リポジトリのSettings > Pagesでソースを「Deploy from a branch」に設定
+3. Branchを「main」に設定
+4. 数分待つとサイトが公開されます
+
+### ローカル開発
+
+静的サイトなので、ブラウザで直接`index.html`を開くか、簡単なHTTPサーバーを使用：
 
 ```bash
-pip install -r requirements.txt
+# Python 3の場合
+python -m http.server 8000
+
+# Node.jsの場合
+npx serve .
 ```
 
-2. サーバーを起動します。
+## ファイル構成
 
-```bash
-python app.py
 ```
-
-ブラウザで `http://<ラズパイのIPアドレス>:5000/` にアクセスするとページが表示されます。
-
-## カスタマイズ
-- `templates/index.html` を編集し、SNS リンクや使用デバイスのリンクを追加してください。
-- スタイルを変更したい場合は `static/styles.css` を編集してください。
-
+├── index.html          # メインページ
+├── static/             # 静的ファイル
+│   ├── styles.css      # CSS
+│   ├── device_imgs/    # デバイス画像
+│   └── icons/          # アイコン画像
+└── _config.yml         # Jekyll設定（GitHub Pages用）
+```

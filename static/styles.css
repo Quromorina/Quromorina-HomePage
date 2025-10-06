@@ -7,12 +7,57 @@ body {
     color: #f0f0f0;
 }
 
+/* === ヘッダー部分 === */
 header {
-    background-color: rgb(116, 6, 6);
-    color: #fff;
-    padding: 1rem;
+    position: relative;
+    background: linear-gradient(180deg, #150010 0%, #300018 100%);
     text-align: center;
+    padding: 80px 20px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(255, 0, 100, 0.3);
 }
+
+/* タイトル文字 */
+header h1 {
+    font-family: "Zen Dots", sans-serif;
+    font-size: 2.8rem;
+    color: #fff;
+    text-shadow: 0 0 10px #ff0066, 0 0 20px #ff0066, 0 0 30px #ff66cc;
+    animation: glowPulse 3s infinite alternate;
+}
+
+  /* 光がじんわり動くアニメーション */
+@keyframes glowPulse {
+    0% { text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff0066, 0 0 20px #ff3399; }
+    100% { text-shadow: 0 0 20px #ff3399, 0 0 40px #ff0066, 0 0 60px #ff66cc; }
+}
+
+  /* 星パーティクル風エフェクト */
+header::before, header::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: radial-gradient(2px 2px at 20% 30%, #fff, transparent),
+                radial-gradient(1px 1px at 70% 80%, #fff, transparent),
+                radial-gradient(2px 2px at 90% 10%, #ffccff, transparent),
+                radial-gradient(1px 1px at 40% 60%, #fff, transparent);
+    animation: starsMove 20s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes starsMove {
+    0% { background-position: 0 0, 0 0, 0 0, 0 0; }
+    100% { background-position: 1000px 1000px, -1000px 500px, 800px -800px, -500px -500px; }
+}
+
+/* 下線＋グロー */
+header::after {
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ff0066, transparent);
+    opacity: 0.7;
+  }
 
 section {
     padding: 1rem;

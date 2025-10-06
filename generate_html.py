@@ -119,7 +119,7 @@ def generate_dynamic_html():
     # デバイスHTMLを生成
     devices_html = '\n            '.join([
         f'''<a class="device-card" href="{device['url']}" target="_new" rel="noopener noreferrer">
-                <img src="{device['image']}" alt="{device['name']}">
+                <img src="{device['image'].replace('/static/', 'static/')}" alt="{device['name']}">
                 <p class="device-type">{device['type']}</p>
                 <h3>{device['name']}</h3>
             </a>''' for device in devices
